@@ -41,7 +41,12 @@ signInWithEmailAndPassword(auth, email.value, password.value)
     // Signed in 
     const user = userCredential.user;
     alert("dang nhap thanh cong")
-    window.location.href = '/admin'
+    if (user.uid === "JCbUe7v4CaZ75jnHq9vp4M2eKf43") {
+      window.location.href = '/admin'
+    }else{
+      window.location.href = '/'
+    }
+
     // ...
   })
   .catch((error) => {
